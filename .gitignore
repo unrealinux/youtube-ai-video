@@ -1,0 +1,12 @@
+# 生成的视频/媒体资源，不入库
+*.mp4
+.DS_Store
+
+longvideo/clips/
+longvideo/clips_video/
+longvideo/clips_ext/
+longvideo/clips_ext_v2/
+longvideo/videos_raw/
+longvideo/videos_raw_v2/
+longvideo/frames_v2/
+longvideo/images/
