@@ -10,3 +10,10 @@ longvideo/videos_raw/
 longvideo/videos_raw_v2/
 longvideo/frames_v2/
 longvideo/images/
+
+# 依赖与生成媒体（只入库文本源）
+node_modules/
+*.png
+*.jpg
+*.jpeg
+*.wav

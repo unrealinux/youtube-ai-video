@@ -1,0 +1,5 @@
+<?svml using="@hypit/recipe@1"?>
+<sheet version="1">
+  film.main { background: #101014; }
+  text.label { size: 68; weight: 800; line-height: 1.06; tracking: 0; }
+</sheet>

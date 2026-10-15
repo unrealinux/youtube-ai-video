@@ -1,0 +1,48 @@
+<?svml using="@hypit/markup@1"?>
+<svml>
+  <import as="time" from="@hypit/timeline-author@1"/>
+  <import as="space" from="@hypit/spatial@1"/>
+  <import as="media" from="@hypit/media@1"/>
+  <import as="visual" from="@hypit/visual-track@1"/>
+  <import as="text" from="@hypit/text-fine@1"/>
+  <import as="fonts" from="@hypit/fontsource@1"/>
+  <import as="film" from="@hypit/film@1"/>
+  <import as="html" from="@hypit/html-video@1"/>
+  <import as="style" source="../styles.svs"/>
+
+  <time:Clock id="clock" frame-rate="30"/>
+  <space:Canvas id="vertical" width="1080" height="1920"/>
+  <space:Frame id="full" within={vertical.bounds} left="0px" top="0px" right="100%" bottom="100%"/>
+  <space:Frame id="lblA" within={vertical.bounds} left="7%" top="7%" right="93%" bottom="45%"/>
+  <space:Frame id="lblB" within={vertical.bounds} left="7%" top="55%" right="93%" bottom="93%"/>
+  <space:Extent id="shotExtent" width="736" height="1312"/>
+  <fonts:Face id="face" package="@fontsource-variable/inter" weight="800" style="normal"/>
+  <media:FontStack id="font" primary={face}/>
+  <media:Image id="img-A1" src="../assets/shots/A1.png"/>
+
+  <text:Style id="fillOnly" recipe={style.text.label} font={font}>
+    <text:Fill color="#FFE24B"/>
+  </text:Style>
+  <text:Style id="withStroke" recipe={style.text.label} font={font}>
+    <text:Fill color="#FFE24B"/>
+    <text:Shadow color="#000000" x="0" y="6" blur="10"/>
+  </text:Style>
+
+  <time:Timeline id="program" clock={clock} end="120f">
+    <time:Window id="winA1" from="0f" until="120f"/>
+  </time:Timeline>
+
+  <visual:Track id="picture" timeline={program.timeline}>
+    <visual:Clip id="clip-A1" image={img-A1} extent={shotExtent} during={program.winA1} frame={full} fit="cover" z="10"/>
+  </visual:Track>
+
+  <text:Flow id="lbl-fill" timeline={program.timeline} within={lblA} style={fillOnly} z="60" align="center" block-align="center" during={program.winA1}>FILL ONLY TEST</text:Flow>
+  <text:Flow id="lbl-stroke" timeline={program.timeline} within={lblB} style={withStroke} z="60" align="center" block-align="center" during={program.winA1}>SHADOW ONLY TEST</text:Flow>
+
+  <film:Film id="main" canvas={vertical.canvas} timeline={program.timeline} appearance={style.film.main}>
+    <film:Track source={picture.visual}/>
+    <film:Track source={lbl-fill.visual}/>
+    <film:Track source={lbl-stroke.visual}/>
+  </film:Film>
+  <html:Video id="final" composition={main.composition} timeline={program.timeline}/>
+</svml>

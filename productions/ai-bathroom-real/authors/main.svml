@@ -1,0 +1,364 @@
+<?svml using="@hypit/markup@1"?>
+<svml>
+  <import as="time" from="@hypit/timeline-author@1"/>
+  <import as="space" from="@hypit/spatial@1"/>
+  <import as="media" from="@hypit/media@1"/>
+  <import as="mediaop" from="@hypit/media-operations@1"/>
+  <import as="visual" from="@hypit/visual-track@1"/>
+  <import as="audio" from="@hypit/audio-track@1"/>
+  <import as="text" from="@hypit/text-fine@1"/>
+  <import as="fonts" from="@hypit/fontsource@1"/>
+  <import as="film" from="@hypit/film@1"/>
+  <import as="html" from="@hypit/html-video@1"/>
+  <import as="style" source="../styles.svs"/>
+
+  <time:Clock id="clock" frame-rate="30"/>
+  <space:Canvas id="vertical" width="1080" height="1920"/>
+  <space:Frame id="full" within={vertical.bounds} left="0px" top="0px" right="100%" bottom="100%"/>
+  <space:Frame id="labelFrame" within={vertical.bounds} left="5%" top="6%" right="95%" bottom="36%"/>
+  <space:Extent id="shotExtent" width="736" height="1312"/>
+
+  <fonts:Face id="face" package="@fontsource-variable/inter" weight="800" style="normal"/>
+  <media:FontStack id="font" primary={face}/>
+  <text:Style id="labelStyle" recipe={style.text.label} font={font}>
+    <text:Fill color="#FFE24B"/>
+    <text:Shadow color="#000000" x="0" y="5" blur="9"/>
+  </text:Style>
+
+  <visual:Motion id="m-push">
+            <visual:Pose at="start" scale="1.02" easing="ease-out"/>
+            <visual:Pose at="end" scale="1.12"/>
+  </visual:Motion>
+  <visual:Motion id="m-pull">
+            <visual:Pose at="start" scale="1.12" easing="ease-out"/>
+            <visual:Pose at="end" scale="1.02"/>
+  </visual:Motion>
+  <visual:Motion id="m-pan-l">
+            <visual:Pose at="start" x="34" scale="1.14" easing="ease-out"/>
+            <visual:Pose at="end" x="-34" scale="1.14"/>
+  </visual:Motion>
+  <visual:Motion id="m-pan-r">
+            <visual:Pose at="start" x="-34" scale="1.14" easing="ease-out"/>
+            <visual:Pose at="end" x="34" scale="1.14"/>
+  </visual:Motion>
+  <visual:Motion id="m-drift">
+            <visual:Pose at="start" y="26" scale="1.13" easing="ease-out"/>
+            <visual:Pose at="end" y="-26" scale="1.13"/>
+  </visual:Motion>
+
+  <media:Image id="img-A1" src="../assets/shots/A1.png"/>
+  <media:Image id="img-A2" src="../assets/shots/A2.png"/>
+  <media:Image id="img-A3" src="../assets/shots/A3.png"/>
+  <media:Image id="img-A4" src="../assets/shots/A4.png"/>
+  <media:Image id="img-A5" src="../assets/shots/A5.png"/>
+  <media:Image id="img-B1" src="../assets/shots/B1.png"/>
+  <media:Image id="img-B2" src="../assets/shots/B2.png"/>
+  <media:Image id="img-B3" src="../assets/shots/B3.png"/>
+  <media:Image id="img-B4" src="../assets/shots/B4.png"/>
+  <media:Image id="img-C1" src="../assets/shots/C1.png"/>
+  <media:Image id="img-C2" src="../assets/shots/C2.png"/>
+  <media:Image id="img-C3" src="../assets/shots/C3.png"/>
+  <media:Image id="img-C4" src="../assets/shots/C4.png"/>
+  <media:Image id="img-C5" src="../assets/shots/C5.png"/>
+  <media:Image id="img-D1" src="../assets/shots/D1.png"/>
+  <media:Image id="img-D2" src="../assets/shots/D2.png"/>
+  <media:Image id="img-D3" src="../assets/shots/D3.png"/>
+  <media:Image id="img-E1" src="../assets/shots/E1.png"/>
+  <media:Image id="img-E2" src="../assets/shots/E2.png"/>
+  <media:Image id="img-E3" src="../assets/shots/E3.png"/>
+  <media:Image id="img-F1" src="../assets/shots/F1.png"/>
+  <media:Image id="img-F2" src="../assets/shots/F2.png"/>
+  <media:Image id="img-F3" src="../assets/shots/F3.png"/>
+  <media:Image id="img-F4" src="../assets/shots/F4.png"/>
+  <media:Image id="img-G1" src="../assets/shots/G1.png"/>
+  <media:Image id="img-G2" src="../assets/shots/G2.png"/>
+  <media:Image id="img-G3" src="../assets/shots/G3.png"/>
+  <media:Image id="img-H1" src="../assets/shots/H1.png"/>
+  <media:Image id="img-H2" src="../assets/shots/H2.png"/>
+  <media:Image id="img-H3" src="../assets/shots/H3.png"/>
+  <media:Image id="img-H4" src="../assets/shots/H4.png"/>
+  <media:Image id="img-H5" src="../assets/shots/H5.png"/>
+
+  <media:Audio id="vo-A1" src="../assets/voice/A1.wav"/>
+  <media:Audio id="vo-A2" src="../assets/voice/A2.wav"/>
+  <media:Audio id="vo-A3" src="../assets/voice/A3.wav"/>
+  <media:Audio id="vo-A4" src="../assets/voice/A4.wav"/>
+  <media:Audio id="vo-A5" src="../assets/voice/A5.wav"/>
+  <media:Audio id="vo-B1" src="../assets/voice/B1.wav"/>
+  <media:Audio id="vo-B2" src="../assets/voice/B2.wav"/>
+  <media:Audio id="vo-B3" src="../assets/voice/B3.wav"/>
+  <media:Audio id="vo-B4" src="../assets/voice/B4.wav"/>
+  <media:Audio id="vo-C1" src="../assets/voice/C1.wav"/>
+  <media:Audio id="vo-C2" src="../assets/voice/C2.wav"/>
+  <media:Audio id="vo-C3" src="../assets/voice/C3.wav"/>
+  <media:Audio id="vo-C4" src="../assets/voice/C4.wav"/>
+  <media:Audio id="vo-D1" src="../assets/voice/D1.wav"/>
+  <media:Audio id="vo-D2" src="../assets/voice/D2.wav"/>
+  <media:Audio id="vo-D3" src="../assets/voice/D3.wav"/>
+  <media:Audio id="vo-E1" src="../assets/voice/E1.wav"/>
+  <media:Audio id="vo-E2" src="../assets/voice/E2.wav"/>
+  <media:Audio id="vo-E3" src="../assets/voice/E3.wav"/>
+  <media:Audio id="vo-F1" src="../assets/voice/F1.wav"/>
+  <media:Audio id="vo-F2" src="../assets/voice/F2.wav"/>
+  <media:Audio id="vo-F3" src="../assets/voice/F3.wav"/>
+  <media:Audio id="vo-F4" src="../assets/voice/F4.wav"/>
+  <media:Audio id="vo-G1" src="../assets/voice/G1.wav"/>
+  <media:Audio id="vo-G2" src="../assets/voice/G2.wav"/>
+  <media:Audio id="vo-G3" src="../assets/voice/G3.wav"/>
+  <media:Audio id="vo-H1" src="../assets/voice/H1.wav"/>
+  <media:Audio id="vo-H2" src="../assets/voice/H2.wav"/>
+  <media:Audio id="vo-H3" src="../assets/voice/H3.wav"/>
+  <media:Audio id="vo-H4" src="../assets/voice/H4.wav"/>
+  <media:Audio id="vo-H5" src="../assets/voice/H5.wav"/>
+
+  <mediaop:Normalize id="vonorm-A1" source={vo-A1} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-A2" source={vo-A2} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-A3" source={vo-A3} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-A4" source={vo-A4} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-A5" source={vo-A5} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-B1" source={vo-B1} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-B2" source={vo-B2} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-B3" source={vo-B3} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-B4" source={vo-B4} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-C1" source={vo-C1} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-C2" source={vo-C2} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-C3" source={vo-C3} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-C4" source={vo-C4} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-D1" source={vo-D1} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-D2" source={vo-D2} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-D3" source={vo-D3} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-E1" source={vo-E1} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-E2" source={vo-E2} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-E3" source={vo-E3} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-F1" source={vo-F1} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-F2" source={vo-F2} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-F3" source={vo-F3} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-F4" source={vo-F4} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-G1" source={vo-G1} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-G2" source={vo-G2} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-G3" source={vo-G3} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-H1" source={vo-H1} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-H2" source={vo-H2} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-H3" source={vo-H3} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-H4" source={vo-H4} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+  <mediaop:Normalize id="vonorm-H5" source={vo-H5} video="none" audio="default"
+    span-authority="audio" clock={clock}/>
+
+  <time:Timeline id="program" clock={clock} end="2874f">
+    <time:Window id="win-A1" from="0f" until="120f"/>
+    <time:Window id="win-A2" from="120f" until="166f"/>
+    <time:Window id="win-A3" from="166f" until="256f"/>
+    <time:Window id="win-A4" from="256f" until="363f"/>
+    <time:Window id="win-A5" from="363f" until="420f"/>
+    <time:Window id="win-B1" from="420f" until="524f"/>
+    <time:Window id="win-B2" from="524f" until="617f"/>
+    <time:Window id="win-B3" from="617f" until="729f"/>
+    <time:Window id="win-B4" from="729f" until="821f"/>
+    <time:Window id="win-C1" from="821f" until="915f"/>
+    <time:Window id="win-C2" from="915f" until="1003f"/>
+    <time:Window id="win-C3" from="1003f" until="1121f"/>
+    <time:Window id="win-C4" from="1121f" until="1224f"/>
+    <time:Window id="win-C5" from="1224f" until="1254f"/>
+    <time:Window id="win-D1" from="1254f" until="1402f"/>
+    <time:Window id="win-D2" from="1402f" until="1477f"/>
+    <time:Window id="win-D3" from="1477f" until="1560f"/>
+    <time:Window id="win-E1" from="1560f" until="1643f"/>
+    <time:Window id="win-E2" from="1643f" until="1733f"/>
+    <time:Window id="win-E3" from="1733f" until="1859f"/>
+    <time:Window id="win-F1" from="1859f" until="1952f"/>
+    <time:Window id="win-F2" from="1952f" until="2055f"/>
+    <time:Window id="win-F3" from="2055f" until="2132f"/>
+    <time:Window id="win-F4" from="2132f" until="2219f"/>
+    <time:Window id="win-G1" from="2219f" until="2293f"/>
+    <time:Window id="win-G2" from="2293f" until="2350f"/>
+    <time:Window id="win-G3" from="2350f" until="2435f"/>
+    <time:Window id="win-H1" from="2435f" until="2500f"/>
+    <time:Window id="win-H2" from="2500f" until="2578f"/>
+    <time:Window id="win-H3" from="2578f" until="2673f"/>
+    <time:Window id="win-H4" from="2673f" until="2766f"/>
+    <time:Window id="win-H5" from="2766f" until="2874f"/>
+  </time:Timeline>
+
+  <visual:Track id="picture" timeline={program.timeline}>
+    <visual:Clip id="clip-A1" image={img-A1} extent={shotExtent}
+      during={program.win-A1} frame={full} fit="cover" z="10" motion={m-push}/>
+    <visual:Clip id="clip-A2" image={img-A2} extent={shotExtent}
+      during={program.win-A2} frame={full} fit="cover" z="10" motion={m-pull}/>
+    <visual:Clip id="clip-A3" image={img-A3} extent={shotExtent}
+      during={program.win-A3} frame={full} fit="cover" z="10" motion={m-pan-l}/>
+    <visual:Clip id="clip-A4" image={img-A4} extent={shotExtent}
+      during={program.win-A4} frame={full} fit="cover" z="10" motion={m-pan-r}/>
+    <visual:Clip id="clip-A5" image={img-A5} extent={shotExtent}
+      during={program.win-A5} frame={full} fit="cover" z="10" motion={m-drift}/>
+    <visual:Clip id="clip-B1" image={img-B1} extent={shotExtent}
+      during={program.win-B1} frame={full} fit="cover" z="10" motion={m-push}/>
+    <visual:Clip id="clip-B2" image={img-B2} extent={shotExtent}
+      during={program.win-B2} frame={full} fit="cover" z="10" motion={m-pull}/>
+    <visual:Clip id="clip-B3" image={img-B3} extent={shotExtent}
+      during={program.win-B3} frame={full} fit="cover" z="10" motion={m-pan-l}/>
+    <visual:Clip id="clip-B4" image={img-B4} extent={shotExtent}
+      during={program.win-B4} frame={full} fit="cover" z="10" motion={m-pan-r}/>
+    <visual:Clip id="clip-C1" image={img-C1} extent={shotExtent}
+      during={program.win-C1} frame={full} fit="cover" z="10" motion={m-drift}/>
+    <visual:Clip id="clip-C2" image={img-C2} extent={shotExtent}
+      during={program.win-C2} frame={full} fit="cover" z="10" motion={m-push}/>
+    <visual:Clip id="clip-C3" image={img-C3} extent={shotExtent}
+      during={program.win-C3} frame={full} fit="cover" z="10" motion={m-pull}/>
+    <visual:Clip id="clip-C4" image={img-C4} extent={shotExtent}
+      during={program.win-C4} frame={full} fit="cover" z="10" motion={m-pan-l}/>
+    <visual:Clip id="clip-C5" image={img-C5} extent={shotExtent}
+      during={program.win-C5} frame={full} fit="cover" z="10" motion={m-pan-r}/>
+    <visual:Clip id="clip-D1" image={img-D1} extent={shotExtent}
+      during={program.win-D1} frame={full} fit="cover" z="10" motion={m-drift}/>
+    <visual:Clip id="clip-D2" image={img-D2} extent={shotExtent}
+      during={program.win-D2} frame={full} fit="cover" z="10" motion={m-push}/>
+    <visual:Clip id="clip-D3" image={img-D3} extent={shotExtent}
+      during={program.win-D3} frame={full} fit="cover" z="10" motion={m-pull}/>
+    <visual:Clip id="clip-E1" image={img-E1} extent={shotExtent}
+      during={program.win-E1} frame={full} fit="cover" z="10" motion={m-pan-l}/>
+    <visual:Clip id="clip-E2" image={img-E2} extent={shotExtent}
+      during={program.win-E2} frame={full} fit="cover" z="10" motion={m-pan-r}/>
+    <visual:Clip id="clip-E3" image={img-E3} extent={shotExtent}
+      during={program.win-E3} frame={full} fit="cover" z="10" motion={m-drift}/>
+    <visual:Clip id="clip-F1" image={img-F1} extent={shotExtent}
+      during={program.win-F1} frame={full} fit="cover" z="10" motion={m-push}/>
+    <visual:Clip id="clip-F2" image={img-F2} extent={shotExtent}
+      during={program.win-F2} frame={full} fit="cover" z="10" motion={m-pull}/>
+    <visual:Clip id="clip-F3" image={img-F3} extent={shotExtent}
+      during={program.win-F3} frame={full} fit="cover" z="10" motion={m-pan-l}/>
+    <visual:Clip id="clip-F4" image={img-F4} extent={shotExtent}
+      during={program.win-F4} frame={full} fit="cover" z="10" motion={m-pan-r}/>
+    <visual:Clip id="clip-G1" image={img-G1} extent={shotExtent}
+      during={program.win-G1} frame={full} fit="cover" z="10" motion={m-drift}/>
+    <visual:Clip id="clip-G2" image={img-G2} extent={shotExtent}
+      during={program.win-G2} frame={full} fit="cover" z="10" motion={m-push}/>
+    <visual:Clip id="clip-G3" image={img-G3} extent={shotExtent}
+      during={program.win-G3} frame={full} fit="cover" z="10" motion={m-pull}/>
+    <visual:Clip id="clip-H1" image={img-H1} extent={shotExtent}
+      during={program.win-H1} frame={full} fit="cover" z="10" motion={m-pan-l}/>
+    <visual:Clip id="clip-H2" image={img-H2} extent={shotExtent}
+      during={program.win-H2} frame={full} fit="cover" z="10" motion={m-pan-r}/>
+    <visual:Clip id="clip-H3" image={img-H3} extent={shotExtent}
+      during={program.win-H3} frame={full} fit="cover" z="10" motion={m-drift}/>
+    <visual:Clip id="clip-H4" image={img-H4} extent={shotExtent}
+      during={program.win-H4} frame={full} fit="cover" z="10" motion={m-push}/>
+    <visual:Clip id="clip-H5" image={img-H5} extent={shotExtent}
+      during={program.win-H5} frame={full} fit="cover" z="10" motion={m-pull}/>
+  </visual:Track>
+
+  <audio:Track id="voice" timeline={program.timeline}>
+    <audio:Clip id="acl-A1" source={vonorm-A1.media} during={program.win-A1}/>
+    <audio:Clip id="acl-A2" source={vonorm-A2.media} during={program.win-A2}/>
+    <audio:Clip id="acl-A3" source={vonorm-A3.media} during={program.win-A3}/>
+    <audio:Clip id="acl-A4" source={vonorm-A4.media} during={program.win-A4}/>
+    <audio:Clip id="acl-A5" source={vonorm-A5.media} during={program.win-A5}/>
+    <audio:Clip id="acl-B1" source={vonorm-B1.media} during={program.win-B1}/>
+    <audio:Clip id="acl-B2" source={vonorm-B2.media} during={program.win-B2}/>
+    <audio:Clip id="acl-B3" source={vonorm-B3.media} during={program.win-B3}/>
+    <audio:Clip id="acl-B4" source={vonorm-B4.media} during={program.win-B4}/>
+    <audio:Clip id="acl-C1" source={vonorm-C1.media} during={program.win-C1}/>
+    <audio:Clip id="acl-C2" source={vonorm-C2.media} during={program.win-C2}/>
+    <audio:Clip id="acl-C3" source={vonorm-C3.media} during={program.win-C3}/>
+    <audio:Clip id="acl-C4" source={vonorm-C4.media} during={program.win-C4}/>
+    <audio:Clip id="acl-D1" source={vonorm-D1.media} during={program.win-D1}/>
+    <audio:Clip id="acl-D2" source={vonorm-D2.media} during={program.win-D2}/>
+    <audio:Clip id="acl-D3" source={vonorm-D3.media} during={program.win-D3}/>
+    <audio:Clip id="acl-E1" source={vonorm-E1.media} during={program.win-E1}/>
+    <audio:Clip id="acl-E2" source={vonorm-E2.media} during={program.win-E2}/>
+    <audio:Clip id="acl-E3" source={vonorm-E3.media} during={program.win-E3}/>
+    <audio:Clip id="acl-F1" source={vonorm-F1.media} during={program.win-F1}/>
+    <audio:Clip id="acl-F2" source={vonorm-F2.media} during={program.win-F2}/>
+    <audio:Clip id="acl-F3" source={vonorm-F3.media} during={program.win-F3}/>
+    <audio:Clip id="acl-F4" source={vonorm-F4.media} during={program.win-F4}/>
+    <audio:Clip id="acl-G1" source={vonorm-G1.media} during={program.win-G1}/>
+    <audio:Clip id="acl-G2" source={vonorm-G2.media} during={program.win-G2}/>
+    <audio:Clip id="acl-G3" source={vonorm-G3.media} during={program.win-G3}/>
+    <audio:Clip id="acl-H1" source={vonorm-H1.media} during={program.win-H1}/>
+    <audio:Clip id="acl-H2" source={vonorm-H2.media} during={program.win-H2}/>
+    <audio:Clip id="acl-H3" source={vonorm-H3.media} during={program.win-H3}/>
+    <audio:Clip id="acl-H4" source={vonorm-H4.media} during={program.win-H4}/>
+    <audio:Clip id="acl-H5" source={vonorm-H5.media} during={program.win-H5}/>
+  </audio:Track>
+
+  <text:Flow id="lbl-A1" timeline={program.timeline} within={labelFrame}
+    style={labelStyle} z="60" align="center" block-align="center"
+    during={program.win-A1}>AI BATHROOM, MADE REAL</text:Flow>
+  <text:Flow id="lbl-A2" timeline={program.timeline} within={labelFrame}
+    style={labelStyle} z="60" align="center" block-align="center"
+    during={program.win-A2}>THE AI DESIGN</text:Flow>
+  <text:Flow id="lbl-A5" timeline={program.timeline} within={labelFrame}
+    style={labelStyle} z="60" align="center" block-align="center"
+    during={program.win-A5}>STEP 1: DEMO</text:Flow>
+  <text:Flow id="lbl-B1" timeline={program.timeline} within={labelFrame}
+    style={labelStyle} z="60" align="center" block-align="center"
+    during={program.win-B1}>mouldy, obviously</text:Flow>
+  <text:Flow id="lbl-B4" timeline={program.timeline} within={labelFrame}
+    style={labelStyle} z="60" align="center" block-align="center"
+    during={program.win-B4}>START WITH THE SINK</text:Flow>
+  <text:Flow id="lbl-C4" timeline={program.timeline} within={labelFrame}
+    style={labelStyle} z="60" align="center" block-align="center"
+    during={program.win-C4}>counterweight</text:Flow>
+  <text:Flow id="lbl-D1" timeline={program.timeline} within={labelFrame}
+    style={labelStyle} z="60" align="center" block-align="center"
+    during={program.win-D1}>REAL or FAKE?</text:Flow>
+  <text:Flow id="lbl-E1" timeline={program.timeline} within={labelFrame}
+    style={labelStyle} z="60" align="center" block-align="center"
+    during={program.win-E1}>THE AI WASHBASIN</text:Flow>
+  <text:Flow id="lbl-F3" timeline={program.timeline} within={labelFrame}
+    style={labelStyle} z="60" align="center" block-align="center"
+    during={program.win-F3}>install the flush</text:Flow>
+  <text:Flow id="lbl-H1" timeline={program.timeline} within={labelFrame}
+    style={labelStyle} z="60" align="center" block-align="center"
+    during={program.win-H1}>THE RESULT</text:Flow>
+  <text:Flow id="lbl-H5" timeline={program.timeline} within={labelFrame}
+    style={labelStyle} z="60" align="center" block-align="center"
+    during={program.win-H5}>SUGGESTIONS???</text:Flow>
+
+  <film:Film id="main" canvas={vertical.canvas} timeline={program.timeline} appearance={style.film.main}>
+    <film:Track source={picture.visual}/>
+    <film:Track source={voice.audio}/>
+    <film:Track source={lbl-A1.visual}/>
+    <film:Track source={lbl-A2.visual}/>
+    <film:Track source={lbl-A5.visual}/>
+    <film:Track source={lbl-B1.visual}/>
+    <film:Track source={lbl-B4.visual}/>
+    <film:Track source={lbl-C4.visual}/>
+    <film:Track source={lbl-D1.visual}/>
+    <film:Track source={lbl-E1.visual}/>
+    <film:Track source={lbl-F3.visual}/>
+    <film:Track source={lbl-H1.visual}/>
+    <film:Track source={lbl-H5.visual}/>
+  </film:Film>
+
+  <html:Video id="final" composition={main.composition} timeline={program.timeline}/>
+</svml>
