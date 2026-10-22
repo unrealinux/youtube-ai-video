@@ -20,7 +20,7 @@ import urllib.error
 import urllib.request
 
 ROOT = pathlib.Path.home() / "MoneyPrinterTurbo"
-WORK = pathlib.Path("/Users/xieyingfei/Documents/youtube-ai-video/longvideo")
+WORK = pathlib.Path(__file__).resolve().parent
 STILLS = WORK / "frames_v2"
 RAW = WORK / "videos_raw_v2"
 STATE = WORK / "v2_state.json"

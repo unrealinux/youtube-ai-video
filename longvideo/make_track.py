@@ -13,7 +13,7 @@ import os
 import pathlib
 import subprocess
 
-WORK = pathlib.Path("/Users/xieyingfei/Documents/youtube-ai-video/longvideo")
+WORK = pathlib.Path(__file__).resolve().parent
 ROOT = pathlib.Path.home() / "MoneyPrinterTurbo"
 RAW = WORK / os.environ.get("MPT_RAW_DIR", "videos_raw")
 EXT = WORK / os.environ.get("MPT_EXT_DIR", "clips_ext")

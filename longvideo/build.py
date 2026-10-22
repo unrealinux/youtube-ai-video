@@ -19,7 +19,7 @@ import urllib.error
 import urllib.request
 
 ROOT = pathlib.Path.home() / "MoneyPrinterTurbo"
-WORK = pathlib.Path("/Users/xieyingfei/Documents/youtube-ai-video/longvideo")
+WORK = pathlib.Path(__file__).resolve().parent
 IMAGES = WORK / "images"
 CLIPS = WORK / "clips"
 FPS = 30

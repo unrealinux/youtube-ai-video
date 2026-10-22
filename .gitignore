@@ -1,19 +1,35 @@
-# 生成的视频/媒体资源，不入库
+# 只入库文本源；所有生成媒体留在本地
 *.mp4
-.DS_Store
-
-longvideo/clips/
-longvideo/clips_video/
-longvideo/clips_ext/
-longvideo/clips_ext_v2/
-longvideo/videos_raw/
-longvideo/videos_raw_v2/
-longvideo/frames_v2/
-longvideo/images/
-
-# 依赖与生成媒体（只入库文本源）
-node_modules/
 *.png
 *.jpg
 *.jpeg
 *.wav
+
+# 依赖与缓存
+node_modules/
+__pycache__/
+.DS_Store
+
+# Hypit 运行时（.hypit/.gitignore 已忽略其内容，这里显式兜底）
+.hypit/
+
+# 每条产线的中间产物目录
+longvideo/images/
+longvideo/clips/
+longvideo/clips_video/
+longvideo/videos_raw/
+longvideo/clips_ext/
+longvideo/clips_ext_v2/
+longvideo/videos_raw_v2/
+longvideo/frames_v2/
+longvideo/output/
+archive/
+
+# 运行状态是执行痕迹，不是源码
+longvideo/*.log
+longvideo/*_state.json
+longvideo/video_tasks.json
+longvideo/v2_done.txt
+longvideo/pass1_taskid.txt
+longvideo/materials.txt
+longvideo/materials_video.txt
