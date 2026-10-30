@@ -1,0 +1,279 @@
+{
+ "env": "Bright 3D animated dental clinic for kids: glossy blue square wall tiles, white tiled floor, big chrome dentist chair, soft blue and white lighting, clean glossy cartoon render, 16:9, no text.",
+ "persona": "Sharky: chubby friendly grey-blue cartoon shark, big white eyes, huge mouth of triangular white teeth, round belly. Tino and Tilly: two small white cartoon tooth mascots with big eyes, stubby arms and legs, cheerful expressions.",
+ "aspect": "16:9",
+ "size": "1920x1080",
+ "shots": [
+  {
+   "id": "S01",
+   "broll": true,
+   "overlay": "Brush, brush, Sharky!",
+   "target": 9,
+   "prompt": "Wide establishing shot of the bright blue-tiled dental clinic, Sharky the chubby cartoon shark sitting in the big chrome dentist chair with mouth wide open, Tino and Tilly standing beside the chair waving at the camera.",
+   "persona": true
+  },
+  {
+   "id": "S02",
+   "broll": true,
+   "overlay": "What's inside?",
+   "target": 9,
+   "prompt": "Extreme close-up of the shark's open mouth: two rows of big triangular teeth with breakfast cereal, crumbs and a piece of banana stuck between them, gross but colourful and funny.",
+   "persona": true
+  },
+  {
+   "id": "S03",
+   "broll": true,
+   "overlay": "Oh no!",
+   "target": 7,
+   "prompt": "Tino the tooth mascot holding both cheeks with wide shocked eyes, mouth open in a comical 'oh no', standing on the dentist chair armrest.",
+   "persona": true
+  },
+  {
+   "id": "S04",
+   "broll": true,
+   "overlay": "We can help!",
+   "target": 7,
+   "prompt": "Tilly the tooth mascot proudly holding up an oversized yellow toothbrush twice her own height, big grin, blue tiled clinic behind.",
+   "persona": true
+  },
+  {
+   "id": "S05",
+   "broll": true,
+   "overlay": "Brush, brush, brush!",
+   "target": 12,
+   "prompt": "Close-up: the giant yellow toothbrush pressed against the shark's front teeth, brown crumbs and bits of food flying outward in motion, shiny white enamel appearing where it has scrubbed.",
+   "persona": true
+  },
+  {
+   "id": "S06",
+   "broll": true,
+   "overlay": "So early in the morning!",
+   "target": 11,
+   "prompt": "The shark's huge mouth squeezed shut in a happy grin, white and blue minty foam bubbling between the teeth, eyes half closed in bliss.",
+   "persona": true
+  },
+  {
+   "id": "S07",
+   "broll": true,
+   "overlay": "Rinse, rinse!",
+   "target": 9,
+   "prompt": "Tino the tooth mascot holding a blue hose nozzle, a thick clear water stream jetting into the shark's open mouth, droplets sparkling.",
+   "persona": true
+  },
+  {
+   "id": "S08",
+   "broll": true,
+   "overlay": "Look how shiny!",
+   "target": 9,
+   "prompt": "Extreme close-up of the shark's front teeth now perfectly clean and glossy white, reflecting the clinic lights, tiny sparkle highlights.",
+   "persona": true
+  },
+  {
+   "id": "S09",
+   "broll": true,
+   "overlay": "Juice stains!",
+   "target": 9,
+   "prompt": "Macro close-up of two front teeth stained bright orange with juice, sticky orange droplets on the enamel, funny rather than gross.",
+   "persona": true
+  },
+  {
+   "id": "S10",
+   "broll": true,
+   "overlay": "A soft round brush.",
+   "target": 7,
+   "prompt": "Tilly the tooth mascot holding up a small round-headed electric brush with a soft pink head, cheerful proud face.",
+   "persona": true
+  },
+  {
+   "id": "S11",
+   "broll": true,
+   "overlay": "Round and round!",
+   "target": 11,
+   "prompt": "Close-up of the round brush spinning in circles on the orange-stained tooth, orange foam swirling in a spiral, motion blur.",
+   "persona": true
+  },
+  {
+   "id": "S12",
+   "broll": true,
+   "overlay": "Wash it off!",
+   "target": 9,
+   "prompt": "A clear water stream washing the orange foam off the teeth, orange bubbles sliding down and away.",
+   "persona": true
+  },
+  {
+   "id": "S13",
+   "broll": true,
+   "overlay": "White again!",
+   "target": 8,
+   "prompt": "Extreme close-up of the two front teeth, now sparkling white again, a single water droplet falling from a tooth tip.",
+   "persona": true
+  },
+  {
+   "id": "S14",
+   "broll": true,
+   "overlay": "Sticky candy!",
+   "target": 9,
+   "prompt": "Macro close-up: a pink sticky candy chewed onto a back molar, stretching in a sticky string, with a tiny fly-free cartoon look.",
+   "persona": true
+  },
+  {
+   "id": "S15",
+   "broll": true,
+   "overlay": "The floss so thin.",
+   "target": 7,
+   "prompt": "Tino the tooth mascot holding a long thin white floss loop stretched between his two stubby hands.",
+   "persona": true
+  },
+  {
+   "id": "S16",
+   "broll": true,
+   "overlay": "In and out!",
+   "target": 11,
+   "prompt": "Close-up of the floss sliding in and out between two back teeth, pink candy being pulled out in a sticky thread.",
+   "persona": true
+  },
+  {
+   "id": "S17",
+   "broll": true,
+   "overlay": "All gone!",
+   "target": 8,
+   "prompt": "The pink candy chunk pops free and flies out of frame, the shark's eye blinking in surprise, clean gap between the teeth.",
+   "persona": true
+  },
+  {
+   "id": "S18",
+   "broll": true,
+   "overlay": "Something green!",
+   "target": 8,
+   "prompt": "Macro close-up of a small green broccoli floret wedged tightly between two back teeth, cartoon-style.",
+   "persona": true
+  },
+  {
+   "id": "S19",
+   "broll": true,
+   "overlay": "One small brush!",
+   "target": 8,
+   "prompt": "Tino and Tilly standing side by side both holding small brushes up in the air, determined cheerful faces.",
+   "persona": true
+  },
+  {
+   "id": "S20",
+   "broll": true,
+   "overlay": "Wiggle it out!",
+   "target": 11,
+   "prompt": "Close-up of two small brushes wiggling together against the trapped broccoli, green bits loosening, bubbles.",
+   "persona": true
+  },
+  {
+   "id": "S21",
+   "broll": true,
+   "overlay": "Out it comes!",
+   "target": 8,
+   "prompt": "The broccoli floret flies out of the frame with a little spray of water, the gap between the teeth now clean.",
+   "persona": true
+  },
+  {
+   "id": "S22",
+   "broll": true,
+   "overlay": "All together!",
+   "target": 8,
+   "prompt": "A giant yellow toothbrush lowered into frame filling most of the picture, held by both tooth mascots, the shark's mouth open wide below.",
+   "persona": true
+  },
+  {
+   "id": "S23",
+   "broll": true,
+   "overlay": "Scrub, scrub, scrub!",
+   "target": 13,
+   "prompt": "Extreme close-up: the giant brush scrubbing across the whole row of teeth, thick white minty foam covering everything, sparkling bubbles.",
+   "persona": true
+  },
+  {
+   "id": "S24",
+   "broll": true,
+   "overlay": "Rinse, and shine!",
+   "target": 10,
+   "prompt": "A curtain of clear water rinsing the foam away, the whole row of teeth gleaming wet and white, light refracting.",
+   "persona": true
+  },
+  {
+   "id": "S25",
+   "broll": true,
+   "overlay": "Look at you!",
+   "target": 9,
+   "prompt": "Sharky the chubby cartoon shark laughing with a huge open smile, every tooth perfectly white and sparkling, Tino and Tilly cheering on the chair.",
+   "persona": true
+  },
+  {
+   "id": "S26",
+   "broll": true,
+   "overlay": "See you next time!",
+   "target": 10,
+   "prompt": "Final shot: Sharky in the dentist chair with Tino and Tilly on either side, all three waving at the camera with big smiles, bright blue clinic.",
+   "persona": true
+  },
+  {
+   "id": "C1",
+   "persona": true,
+   "overlay": "Brush, brush, brush! Up and down!",
+   "target": 7,
+   "prompt": "Wide shot of the bright blue-tiled dental clinic: the chubby cartoon shark sits in the dentist chair brushing his own teeth with a giant yellow brush while the two small white tooth mascots brush their own tiny teeth beside him, all three brushing in rhythm."
+  },
+  {
+   "id": "C2",
+   "persona": true,
+   "overlay": "Brush, brush, brush! All around!",
+   "target": 7,
+   "prompt": "Overhead top-down macro view looking straight into the shark's open mouth, a big round brush spinning in circles on the molars, white foam swirling in a spiral, no characters."
+  },
+  {
+   "id": "C3",
+   "persona": true,
+   "overlay": "Tino brushes, Tilly brushes!",
+   "target": 7,
+   "prompt": "The two small white tooth mascots standing side by side facing the camera, each holding a brush up like a microphone, big happy open mouths as if singing."
+  },
+  {
+   "id": "C4",
+   "persona": true,
+   "overlay": "Sharky smiles a great big smile!",
+   "target": 7,
+   "prompt": "Extreme close-up of the chubby cartoon shark's face with a huge open happy smile, all teeth sparkling white, eyes squinting with joy."
+  },
+  {
+   "id": "C5",
+   "persona": true,
+   "overlay": "Left side, right side, front and back!",
+   "target": 7,
+   "prompt": "Fun shot inside the shark's open mouth: two tooth mascots standing on the lower teeth, one brushing the left side, the other brushing the right side, foam everywhere."
+  },
+  {
+   "id": "C6",
+   "persona": true,
+   "overlay": "Shh, shh, shh! Spit it out!",
+   "target": 7,
+   "prompt": "The shark leaning over a white ceramic sink spitting out minty white foam, the two tooth mascots watching proudly beside the sink."
+  },
+  {
+   "id": "C7",
+   "persona": true,
+   "overlay": "Rinse, rinse! One, two, three!",
+   "target": 7,
+   "prompt": "Close-up of clear water splashing in the white sink, foam washing away down the drain, sparkling water droplets in the air."
+  },
+  {
+   "id": "C8",
+   "persona": true,
+   "overlay": "Everybody brush with me!",
+   "target": 7,
+   "prompt": "All three characters dancing together in the middle of the blue-tiled clinic, the shark wiggling with a brush in his fin, the two tooth mascots jumping with brushes up."
+  },
+  {
+   "id": "C9",
+   "persona": true,
+   "overlay": "Brush, brush, brush! See you soon!",
+   "target": 8,
+   "prompt": "Warm final shot: the shark and the two tooth mascots giving each other a high five in front of the dentist chair, all smiling at the camera, bright blue clinic."
+  }
+ ]
+}

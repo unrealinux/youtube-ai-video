@@ -1,0 +1,183 @@
+{
+ "engine": "macos-say",
+ "voice": "Samantha",
+ "rate": 145,
+ "targetTotal": 301,
+ "lines": [
+  {
+   "id": "S01",
+   "target": 9,
+   "text": "Brush, brush, Sharky!"
+  },
+  {
+   "id": "S02",
+   "target": 9,
+   "text": "What's inside?"
+  },
+  {
+   "id": "S03",
+   "target": 7,
+   "text": "Oh no!"
+  },
+  {
+   "id": "S04",
+   "target": 7,
+   "text": "We can help!"
+  },
+  {
+   "id": "S05",
+   "target": 12,
+   "text": "Brush, brush, brush!"
+  },
+  {
+   "id": "S06",
+   "target": 11,
+   "text": "So early in the morning!"
+  },
+  {
+   "id": "S07",
+   "target": 9,
+   "text": "Rinse, rinse!"
+  },
+  {
+   "id": "S08",
+   "target": 9,
+   "text": "Look how shiny!"
+  },
+  {
+   "id": "S09",
+   "target": 9,
+   "text": "Juice stains!"
+  },
+  {
+   "id": "S10",
+   "target": 7,
+   "text": "A soft round brush."
+  },
+  {
+   "id": "S11",
+   "target": 11,
+   "text": "Round and round!"
+  },
+  {
+   "id": "S12",
+   "target": 9,
+   "text": "Wash it off!"
+  },
+  {
+   "id": "S13",
+   "target": 8,
+   "text": "White again!"
+  },
+  {
+   "id": "S14",
+   "target": 9,
+   "text": "Sticky candy!"
+  },
+  {
+   "id": "S15",
+   "target": 7,
+   "text": "The floss so thin."
+  },
+  {
+   "id": "S16",
+   "target": 11,
+   "text": "In and out!"
+  },
+  {
+   "id": "S17",
+   "target": 8,
+   "text": "All gone!"
+  },
+  {
+   "id": "S18",
+   "target": 8,
+   "text": "Something green!"
+  },
+  {
+   "id": "S19",
+   "target": 8,
+   "text": "One small brush!"
+  },
+  {
+   "id": "S20",
+   "target": 11,
+   "text": "Wiggle it out!"
+  },
+  {
+   "id": "S21",
+   "target": 8,
+   "text": "Out it comes!"
+  },
+  {
+   "id": "S22",
+   "target": 8,
+   "text": "All together!"
+  },
+  {
+   "id": "S23",
+   "target": 13,
+   "text": "Scrub, scrub, scrub!"
+  },
+  {
+   "id": "S24",
+   "target": 10,
+   "text": "Rinse, and shine!"
+  },
+  {
+   "id": "S25",
+   "target": 9,
+   "text": "Look at you!"
+  },
+  {
+   "id": "S26",
+   "target": 10,
+   "text": "See you next time!"
+  },
+  {
+   "id": "C1",
+   "target": 7,
+   "text": "Brush, brush, brush! Up and down!"
+  },
+  {
+   "id": "C2",
+   "target": 7,
+   "text": "Brush, brush, brush! All around!"
+  },
+  {
+   "id": "C3",
+   "target": 7,
+   "text": "Tino brushes, Tilly brushes!"
+  },
+  {
+   "id": "C4",
+   "target": 7,
+   "text": "Sharky smiles a great big smile!"
+  },
+  {
+   "id": "C5",
+   "target": 7,
+   "text": "Left side, right side, front and back!"
+  },
+  {
+   "id": "C6",
+   "target": 7,
+   "text": "Shh, shh, shh! Spit it out!"
+  },
+  {
+   "id": "C7",
+   "target": 7,
+   "text": "Rinse, rinse! One, two, three!"
+  },
+  {
+   "id": "C8",
+   "target": 7,
+   "text": "Everybody brush with me!"
+  },
+  {
+   "id": "C9",
+   "target": 8,
+   "text": "Brush, brush, brush! See you soon!"
+  }
+ ]
+}

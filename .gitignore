@@ -33,3 +33,14 @@ longvideo/v2_done.txt
 longvideo/pass1_taskid.txt
 longvideo/materials.txt
 longvideo/materials_video.txt
+
+# 生成的音频中间件（voice 音频体积大，留本地）
+*.aiff
+*.mp3
+*.m4a
+
+# 渲染中间产物
+productions/*/build/
+productions/*/build3/
+productions/*/output/
+references/*/*.mp4
